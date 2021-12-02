@@ -20,7 +20,7 @@ public class IceCreamSalon implements Profitable, IceCreamSeller {
         Cone cone = new Cone(balls);
         for (Cone.Flavor ball : balls) {
             double price = priceList.getBallPrice();
-            totalProfit = (price * 5) / 100;
+            totalProfit += (price * 5) / 100;
         }
         return cone;
     }
@@ -29,7 +29,7 @@ public class IceCreamSalon implements Profitable, IceCreamSeller {
     public IceRocket orderIceRocket() {
         IceRocket iceRocket = new IceRocket();
         double price = priceList.getRocketPrice();
-        totalProfit = (price * 8) / 100;
+        totalProfit += (price * 8) / 100;
         return iceRocket;
     }
 
@@ -37,7 +37,7 @@ public class IceCreamSalon implements Profitable, IceCreamSeller {
     public Magnum orderMagnum(Magnum.MagnumType magnumType) {
         Magnum magnum = new Magnum(magnumType);
         double price = priceList.getMagnumPrice(magnumType);
-        totalProfit = (price * 10) / 100;
+        totalProfit += (price * 10) / 100;
         return magnum;
     }
 

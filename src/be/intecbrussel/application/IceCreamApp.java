@@ -22,8 +22,9 @@ public class IceCreamApp {
         Eatable[] iceCream = {orderMagnumWhite, orderMagnumAlpineNut, orderIceRocket};
         for (Eatable eatable : iceCream) {
             eatable.eat();
-            System.out.println(iceCreamSeller.getProfit());// problem in this line
         }
+        System.out.println("Total Profit" +iceCreamSeller.getProfit());
+
 
     }
 }

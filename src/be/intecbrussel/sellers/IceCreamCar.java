@@ -27,7 +27,7 @@ public class IceCreamCar implements IceCreamSeller {
 
         for (Cone.Flavor ball : balls) {
             double price = priceList.getBallPrice();
-            profit = (price * 5) / 100;
+            profit += (price * 5) / 100;
         }
         if (stock.getCones() == 0 || stock.getBalls() == 0)
             throw new NoMoreIceCreamException("no more cones");
@@ -47,7 +47,7 @@ public class IceCreamCar implements IceCreamSeller {
     public IceRocket prepareIceRocket() throws NoMoreIceCreamException {
         IceRocket iceRocket = new IceRocket();
         double price = priceList.getRocketPrice();
-        profit = (price * 8) / 100;
+        profit += (price * 8) / 100;
         if (stock.getIceRocket() == 0) {
             throw new NoMoreIceCreamException("there is no more Rocket ice cream");
         }
@@ -65,7 +65,7 @@ public class IceCreamCar implements IceCreamSeller {
     public Magnum prepareMagnum(Magnum.MagnumType magnumType) throws NoMoreIceCreamException {
         Magnum magnum = new Magnum(magnumType);
         double price = priceList.getMagnumPrice(magnumType);
-        profit = (price * 10) / 100;
+        profit += (price * 10) / 100;
         if (stock.getMagni() == 0) {
             throw new NoMoreIceCreamException("there is no more MAGNUM");
         }
